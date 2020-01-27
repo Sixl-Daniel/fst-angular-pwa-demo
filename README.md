@@ -1,5 +1,7 @@
 # FstAngularPwa
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1d8b4463-7b76-4578-acc7-9797f95dc1fe/deploy-status)](https://app.netlify.com/sites/fst-angular-pwa-demo/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
 ## Development server

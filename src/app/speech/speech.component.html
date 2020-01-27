@@ -1,0 +1,7 @@
+<h1>Speech Synthesis</h1>
+
+<mat-form-field>
+  <input matInput placeholder="Text zum Vorlesen" #textboxspeech>
+</mat-form-field>
+
+<p><button mat-raised-button color="primary" (click)="readAloud(textboxspeech.value)">Vorlesen</button></p>
