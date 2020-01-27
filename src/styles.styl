@@ -6,13 +6,34 @@ body
     font-family: Roboto, "Helvetica Neue", sans-serif
 
 .content
-    padding: 16px 32px
+    padding: 2rem
     max-width: 960px
-    margin: 32px auto 0
+    margin: 2rem auto 0
     display: flex
     flex-flow: column
-    box-shadow: 4px 16px 20px 0 #0000003d
+    box-shadow: 0.25rem 1rem 1.25rem 0 #0000003d
     background-color: #191919
+    h1
+        margin: 0 0 1rem
+    h2
+        margin: 1.5rem 0 1rem
 
+.add-todo-card
+    button
+        margin-left: 1.5rem
 
+.mat-selection-list.todo-list.mat-list-base
+    .mat-list-item, .mat-list-base .mat-list-option
+        height: 4rem
+    .mat-list-item .mat-list-text
+        padding-right: 0
+        padding-left: 16px
+        display: flex
+        align-items: center
+        flex-flow: row nowrap
+        justify-content: space-between
+        margin: 0 0 0 0.5rem
+        padding: 0.25rem 0.5rem !important
+        border-width: 0 0 1px 0
+        border-radius: 4px
 

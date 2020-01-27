@@ -14,41 +14,46 @@ import { LayoutModule } from "@angular/cdk/layout";
 // import { MatListModule } from "@angular/material/list";
 
 import {
-  MatToolbarModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule
-} from "@angular/material/";
-import { SpeechComponent } from "./speech/speech.component";
-import { HomeComponent } from "./home/home.component";
-import { AboutComponent } from "./about/about.component";
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    SpeechComponent,
-    HomeComponent,
-    AboutComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    MatCardModule
+} from "@angular/material/";
+
+import { SpeechComponent } from "./speech/speech.component";
+import { HomeComponent } from "./home/home.component";
+import { AboutComponent } from "./about/about.component";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
+
+@NgModule({
+    declarations: [
+        AppComponent,
+        NavComponent,
+        SpeechComponent,
+        HomeComponent,
+        AboutComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatCardModule,
+        ServiceWorkerModule.register("ngsw-worker.js", {
+            enabled: environment.production
+        })
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,1 +1,25 @@
 <h1>Startseite</h1>
+
+<section>
+    <h2>Neues To-Do anlegen</h2>
+    <mat-card class="add-todo-card">
+        <mat-form-field>
+            <input matInput placeholder="Neues To-Do" #textbox>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addTodo(textbox.value)">Einfügen</button>
+    </mat-card>
+</section>
+
+<section>
+    <h2>To-Do-Liste</h2>
+    <mat-card>
+        <mat-selection-list class="todo-list" (selectionChange)="toggleTodo($event)">
+            <mat-list-option checkboxPosition="before" *ngFor="let todo of todos" [value]="todo" [selected]="todo.done">
+                <p class="title">{{todo.title}}</p>
+                <button mat-mini-fab color="primary" (click)="deleteTodo($event, todo.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-card>
+</section>
